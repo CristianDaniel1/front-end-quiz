@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url(./assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.border-gradient {
+  border: 3px solid;
+  border-image: linear-gradient(to bottom left, #164e63, #9a5115) 1;
+}
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen text-slate-200 bg-primary-dark;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1e293b;
+}
+
+progress::-webkit-progress-bar {
+  background: #94a3b8;
+  border-radius: 24px;
+}
+
+progress::-webkit-progress-value {
+  background: #0284c7;
+  border-radius: 24px;
+}
+
+.answered::-webkit-progress-value {
+  background: #334155;
+  border-radius: 24px;
+}
