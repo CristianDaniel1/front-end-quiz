@@ -7,6 +7,10 @@ import github from './assets/github-icon.svg';
 import linkedin from './assets/linkedin.svg';
 import email from './assets/email.png';
 
+import goldenCup from './assets/golden-cup.png';
+import silverCup from './assets/silver-cup.png';
+import bronzeCup from './assets/bronze-cup.png';
+
 export const allQuizzes = [
   {
     quizId: 'html',
@@ -330,7 +334,7 @@ export const allQuizzes = [
 export const availableQuizzes = [
   {
     quiz: 'HTML',
-    description: 'Teste seus conhecimentos sobre JavaScript com este quiz!',
+    description: 'Você domina as tags e atributos de HTML? Faça o teste!',
     image: {
       icon: htmlImg,
       alt: 'icone de html',
@@ -339,7 +343,8 @@ export const availableQuizzes = [
   {
     quiz: 'CSS',
 
-    description: 'Teste seus conhecimentos sobre JavaScript com este quiz!',
+    description:
+      'Conhece tudo o que precisa para estilizar os seus sites? Teste seu conhecimento de CSS',
     image: {
       icon: cssImg,
       alt: 'icone de css',
@@ -347,7 +352,7 @@ export const availableQuizzes = [
   },
   {
     quiz: 'JavaScript',
-    description: 'Teste seus conhecimentos sobre JavaScript com este quiz!',
+    description: 'Veja se domina a sintaxe da linguagem JavaScript!',
     image: {
       icon: javascriptImg,
       alt: 'icone de javascript',
@@ -355,7 +360,7 @@ export const availableQuizzes = [
   },
   {
     quiz: 'React',
-    description: 'Teste seus conhecimentos sobre JavaScript com este quiz!',
+    description: 'Teste seu nível de React!',
     image: {
       icon: reactImg,
       alt: 'icone de react',
@@ -380,3 +385,9 @@ export const links = [
     alt: 'Icone de email',
   },
 ];
+
+export const resultsCup = {
+  goldenCup,
+  silverCup,
+  bronzeCup,
+};

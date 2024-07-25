@@ -11,7 +11,7 @@ export const QuizSelection = ({ onSelect }: QuizSelectionProps) => {
       {availableQuizzes.map(quiz => (
         <li
           key={quiz.quiz}
-          className="bg-slate-900 border-gradient rounded-xl px-6 py-6 max-w-80"
+          className="bg-slate-900 border-gradient rounded-xl px-6 py-6 w-80"
         >
           <img
             src={quiz.image.icon}
