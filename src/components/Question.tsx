@@ -25,9 +25,9 @@ export const Question = ({
   }, [newQuiz, onNextQuestion]);
 
   return (
-    <div className="bg-primary-dark p-12 mx-auto my-10 max-w-3xl border-gradient">
-      <div className="flex gap-4 justify-between">
-        <div className="font-medium">
+    <div className="bg-primary-dark p-6 sm:p-8 md:p-12 mx-auto max-w-3xl border-gradient">
+      <div className="flex gap-4 justify-between items-center">
+        <div className="text-sm sm:text-base font-medium">
           Questão {currentQuestion + 1}/{quizCompleted}
         </div>
         <TimerContainer
@@ -35,7 +35,7 @@ export const Question = ({
           onSkipQuestion={handleSkipQuestion}
         />
       </div>
-      <p className="text-center p-4 my-4 text-xl font-semibold">
+      <p className="text-center px-2 sm:px-4 py-4 my-4 text-lg sm:text-xl font-semibold">
         {newQuiz.questions[currentQuestion].question}
       </p>
       <Answers

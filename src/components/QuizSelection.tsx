@@ -7,7 +7,7 @@ interface QuizSelectionProps {
 
 export const QuizSelection = ({ onSelect }: QuizSelectionProps) => {
   return (
-    <ul className="flex flex-wrap justify-center gap-6 mt-8 mb-14 p-4">
+    <ul className="flex flex-wrap justify-center gap-4">
       {availableQuizzes.map(quiz => (
         <li
           key={quiz.quiz}
@@ -18,9 +18,11 @@ export const QuizSelection = ({ onSelect }: QuizSelectionProps) => {
             alt={quiz.image.alt}
             width={100}
             height={100}
-            className="mx-auto"
+            className="mx-auto max-w-20 sm:max-w-[100px]"
           />
-          <h2 className="text-2xl text-center text-sky-400 p-4">{quiz.quiz}</h2>
+          <h2 className="text-2xl font-medium text-center text-sky-400 p-4">
+            {quiz.quiz}
+          </h2>
           <p className="text-center">{quiz.description}</p>
           <Button onClick={() => onSelect(quiz.quiz)}>Iniciar</Button>
         </li>

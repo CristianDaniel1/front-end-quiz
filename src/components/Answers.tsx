@@ -46,7 +46,7 @@ export const Answers = ({
   }
 
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="flex flex-col gap-3 sm:gap-4">
       {allAnswers.options.map(opt => {
         if (answer.isAnswered) {
           classes =
@@ -62,7 +62,7 @@ export const Answers = ({
         return (
           <li key={opt}>
             <button
-              className={`${classes} rounded-full block w-full py-3 px-4 border-2 border-transparent  duration-300 hover:translate-x-3 lg:text-xl`}
+              className={`${classes} rounded-full block w-full py-2 px-3 sm:py-3 sm:px-4 border-2 border-transparent duration-300 hover:translate-x-3 md:text-xl`}
               onClick={() => handleSelect(opt)}
               disabled={answer.isAnswered}
             >

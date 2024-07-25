@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Header tech={selectedQuiz} />
-      <main className="max-w-5xl lg:max-w-6xl mx-auto">
+      <main className="max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 py-6 mb-10">
         {!selectedQuiz && <QuizSelection onSelect={handleSelectQuiz} />}
         {selectedQuiz && (
           <Quiz selectQuiz={selectedQuiz} onSelectQuiz={handleSelectQuiz} />

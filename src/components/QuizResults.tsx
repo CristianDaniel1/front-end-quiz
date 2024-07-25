@@ -31,12 +31,12 @@ export const QuizResults = ({ quizId, onSelect }: QuizResultsProps) => {
     cup = resultsCup.silverCup;
 
   return (
-    <div className="bg-primary-dark py-12 px-4 mx-auto my-10 max-w-3xl border-gradient text-center animate-slide-up">
+    <div className="bg-primary-dark py-12 px-4 mx-auto max-w-3xl border-gradient text-center animate-slide-up">
       <h2 className="text-3xl md:text-4xl mb-4 font-semibold">
         Quiz Completado!
       </h2>
       <img
-        className="block mx-auto py-3"
+        className="block mx-auto py-3 w-44 sm:w-[200px]"
         src={cup}
         alt="winner cup"
         width={200}
