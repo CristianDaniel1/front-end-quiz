@@ -1,5 +1,5 @@
 import { useUserAnswersStore } from '../store/userAnswersStore.ts';
-import { Button } from './Button.tsx';
+import { Button } from './ui/Button.tsx';
 import { resultsCup } from '../data.ts';
 
 interface QuizResultsProps {
@@ -9,6 +9,7 @@ interface QuizResultsProps {
 
 export const QuizResults = ({ quizId, onSelect }: QuizResultsProps) => {
   const answers = useUserAnswersStore(state => state.answers);
+  const addQuizResult = useUserAnswersStore(state => state.addQuizResult);
 
   const currentQuizAnswers = answers.filter(answer => answer.quizId === quizId);
 
@@ -18,6 +19,8 @@ export const QuizResults = ({ quizId, onSelect }: QuizResultsProps) => {
 
   const correctPercentage =
     (correctAnswers.length / currentQuizAnswers.length) * 100;
+
+  addQuizResult({ quizId, percentage: correctPercentage });
 
   function handleSelectQuiz() {
     onSelect('');
@@ -43,7 +46,8 @@ export const QuizResults = ({ quizId, onSelect }: QuizResultsProps) => {
         height={250}
       />
       <p className="text-2xl font-semibold">
-        Você obteve uma taxa de {correctPercentage}% de acertos
+        Você obteve uma taxa de{' '}
+        <span className="text-sky-400">{correctPercentage}% de acertos</span>
       </p>
       <Button onClick={handleSelectQuiz}>Fazer outro quiz!</Button>
     </div>

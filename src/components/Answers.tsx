@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { type UserAnswer, type Question } from '../types.ts';
 import { useUserAnswersStore } from '../store/userAnswersStore.ts';
-import { TIMER, TIMER_SELECTED } from './constants/constants.ts';
+import { TIMER, TIMER_SELECTED } from '../constants/constants.ts';
+import { type UserAnswer, type Question } from '../types.ts';
 
 interface AnswersProps {
   quizId: string;

@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import { Answers } from './Answers.tsx';
-import { TimerContainer } from './TimerContainer.tsx';
+import { TimerContainer } from './timer/TimerContainer.tsx';
 import { type UserAnswer, type Quiz } from '../types.ts';
 
 interface QuizProps {

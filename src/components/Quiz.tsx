@@ -3,8 +3,8 @@ import { useCallback, useState } from 'react';
 import { Question } from './Question.tsx';
 import { allQuizzes } from '../data.ts';
 import { useUserAnswersStore } from '../store/userAnswersStore.ts';
-import { type Quiz as QuizType, type UserAnswer } from '../types.ts';
 import { QuizResults } from './QuizResults.tsx';
+import { type Quiz as QuizType, type UserAnswer } from '../types.ts';
 
 interface QuizProps {
   selectQuiz: string;

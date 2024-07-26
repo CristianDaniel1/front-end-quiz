@@ -1,6 +1,6 @@
 // import { useUserAnswersStore } from '../store/userAnswersStore.ts';
-import { useUserAnswersStore } from '../store/userAnswersStore.ts';
-import { TIMER_SELECTED } from './constants/constants.ts';
+import { useUserAnswersStore } from '../../store/userAnswersStore.ts';
+import { TIMER_SELECTED } from '../../constants/constants.ts';
 
 import { Timer } from './Timer.tsx';
 

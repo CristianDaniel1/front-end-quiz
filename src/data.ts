@@ -302,7 +302,7 @@ export const allQuizzes = [
           'Usando o atributo style',
           'Usando classes CSS',
           'Usando bibliotecas de estilo como styled-components',
-          'Todas as opções acima',
+          'Todas as opções',
         ],
         answer: 'Todas as opções',
       },
@@ -325,7 +325,7 @@ export const allQuizzes = [
           'Usando MobX',
           'Todas as opções',
         ],
-        answer: 'Todas as opções acima',
+        answer: 'Todas as opções',
       },
     ],
   },
@@ -352,7 +352,7 @@ export const availableQuizzes = [
   },
   {
     quiz: 'JavaScript',
-    description: 'Veja se domina a sintaxe da linguagem JavaScript!',
+    description: 'Veja se domina os métodos e sintaxe da linguagem JavaScript!',
     image: {
       icon: javascriptImg,
       alt: 'icone de javascript',
@@ -360,7 +360,8 @@ export const availableQuizzes = [
   },
   {
     quiz: 'React',
-    description: 'Teste seu nível de React!',
+    description:
+      'Teste seu nível de React! Componentes, hooks e estados globais',
     image: {
       icon: reactImg,
       alt: 'icone de react',

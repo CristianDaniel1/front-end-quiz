@@ -1,3 +1,14 @@
+export type QuizImage = {
+  icon: string;
+  alt: string;
+};
+
+export type AvailableQuizInfo = {
+  quiz: string;
+  description: string;
+  image: QuizImage;
+};
+
 export type Question = {
   question: string;
   options: string[];
@@ -17,3 +28,8 @@ export type Answer = {
 export type UserAnswer = {
   quizId: string;
 } & Answer;
+
+export type CorrectPercentage = {
+  quizId: string;
+  percentage: number;
+};
