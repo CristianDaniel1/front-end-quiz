@@ -3,13 +3,19 @@ import { Header } from './components/Header.tsx';
 import { QuizSelection } from './components/QuizSelection.tsx';
 import { Quiz } from './components/Quiz.tsx';
 import { Footer } from './components/Footer.tsx';
+import { useUserAnswersStore } from './store/userAnswersStore.ts';
 
 function App() {
   const [selectedQuiz, setSelectedQuiz] = useState('');
+  const cleanPrevAnswers = useUserAnswersStore(state => state.cleanPrevAnswers);
 
   function handleSelectQuiz(quiz: string) {
     setSelectedQuiz(quiz);
+
+    if (quiz) cleanPrevAnswers(quiz.toLowerCase());
   }
+
+  console.log('APP');
 
   return (
     <>
