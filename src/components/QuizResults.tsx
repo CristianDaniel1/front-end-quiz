@@ -4,7 +4,7 @@ import { resultsCup } from '../data.ts';
 
 interface QuizResultsProps {
   quizId: string;
-  onSelect: (quiz: string) => void;
+  onSelect: () => void;
 }
 
 export const QuizResults = ({ quizId, onSelect }: QuizResultsProps) => {
@@ -21,10 +21,6 @@ export const QuizResults = ({ quizId, onSelect }: QuizResultsProps) => {
     (correctAnswers.length / currentQuizAnswers.length) * 100;
 
   addQuizResult({ quizId, percentage: correctPercentage });
-
-  function handleSelectQuiz() {
-    onSelect('');
-  }
 
   let cup: string = resultsCup.bronzeCup;
 
@@ -49,7 +45,7 @@ export const QuizResults = ({ quizId, onSelect }: QuizResultsProps) => {
         Você obteve uma taxa de{' '}
         <span className="text-sky-400">{correctPercentage}% de acertos</span>
       </p>
-      <Button onClick={handleSelectQuiz}>Fazer outro quiz!</Button>
+      <Button onClick={onSelect}>Fazer outro quiz!</Button>
     </div>
   );
 };

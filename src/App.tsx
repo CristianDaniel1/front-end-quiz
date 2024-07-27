@@ -11,11 +11,10 @@ function App() {
 
   function handleSelectQuiz(quiz: string) {
     setSelectedQuiz(quiz);
+    window.scrollTo({ top: 0, behavior: 'instant' });
 
     if (quiz) cleanPrevAnswers(quiz.toLowerCase());
   }
-
-  console.log('APP');
 
   return (
     <>
