@@ -2,6 +2,7 @@ import htmlImg from './assets/html-icon.svg';
 import cssImg from './assets/css-icon.svg';
 import javascriptImg from './assets/javascript-icon.svg';
 import reactImg from './assets/react-icon.svg';
+import tailwindImg from './assets/tailwind-icon.svg';
 
 import github from './assets/github-icon.svg';
 import linkedin from './assets/linkedin.svg';
@@ -329,6 +330,75 @@ export const allQuizzes = [
       },
     ],
   },
+  {
+    quizId: 'tailwind',
+    questions: [
+      {
+        question:
+          'Qual é a classe TailwindCSS usada para definir a cor de fundo azul?',
+        options: ['background-blue', 'bg-blue-500', 'bg-blue', 'blue-500'],
+        answer: 'bg-blue-500',
+      },
+      {
+        question:
+          'Como você aplica margem de 4 unidades em todas as direções usando TailwindCSS?',
+        options: ['m-4', 'margin-4', 'p-4', 'pad-4'],
+        answer: 'm-4',
+      },
+      {
+        question:
+          'Qual é a classe TailwindCSS para definir um texto centralizado?',
+        options: [
+          'center-text',
+          'align-center',
+          'text-align-center',
+          'text-center',
+        ],
+        answer: 'text-center',
+      },
+      {
+        question:
+          'Como você aplica um padding de 2 unidades na parte superior e inferior usando TailwindCSS?',
+        options: ['py-2', 'ptb-2', 'padding-y-2', 'pad-y-2'],
+        answer: 'py-2',
+      },
+      {
+        question:
+          'Qual classe TailwindCSS é usada para tornar um texto em negrito?',
+        options: ['text-bold', 'font-bold', 'bold', 'font-weight-bold'],
+        answer: 'font-bold',
+      },
+      {
+        question: 'Como você define uma largura de 50% usando TailwindCSS?',
+        options: ['width-50', 'w-1/2', 'w-50', 'width-1/2'],
+        answer: 'w-1/2',
+      },
+      {
+        question:
+          'Qual classe TailwindCSS é usada para aplicar um espaçamento interno (padding) apenas no lado esquerdo?',
+        options: ['pl-4', 'padding-left-4', 'px-4', 'pad-left-4'],
+        answer: 'pl-4',
+      },
+      {
+        question:
+          'Como você define um display flex em um elemento usando TailwindCSS?',
+        options: ['d-flex', 'display-flex', 'flexible', 'flex'],
+        answer: 'flex',
+      },
+      {
+        question:
+          'Qual é a classe TailwindCSS para definir uma borda arredondada?',
+        options: ['border-rounded', 'rounded', 'radius', 'border-radius'],
+        answer: 'rounded',
+      },
+      {
+        question:
+          'Como você aplica um espaçamento horizontal (margin) de 6 unidades usando TailwindCSS?',
+        options: ['mh-6', 'margin-h-6', 'mx-6', 'margin-horizontal-6'],
+        answer: 'mx-6',
+      },
+    ],
+  },
 ];
 
 export const availableQuizzes = [
@@ -365,6 +435,15 @@ export const availableQuizzes = [
     image: {
       icon: reactImg,
       alt: 'icone de react',
+    },
+  },
+  {
+    quiz: 'Tailwind',
+    description:
+      'Tem conhecimento sólido de um dos Frameworks de CSS mais populares? Então realize o quiz!',
+    image: {
+      icon: tailwindImg,
+      alt: 'icone de Tainwind CSS',
     },
   },
 ];
