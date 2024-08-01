@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { TIMER } from '../constants/constants.ts';
 import { type UserAnswer, type CorrectPercentage } from '../types.ts';
+import { getItemStorage, setItemStorage } from '../utils/localStorage.ts';
 
 interface UserAnswers {
   answers: UserAnswer[];
@@ -12,11 +13,13 @@ interface UserAnswers {
   addQuizResult: (result: CorrectPercentage) => void;
 }
 
+const savedResults = getItemStorage('results', []);
+
 export const useUserAnswersStore = create<UserAnswers>((set, get) => {
   return {
     answers: [],
     timer: TIMER,
-    results: [],
+    results: savedResults,
     addAnswer: ({ quizId, answer, isCorrect }) => {
       const answers = get().answers;
       const updatedAnswers = [...answers];
@@ -45,6 +48,7 @@ export const useUserAnswersStore = create<UserAnswers>((set, get) => {
         updatedResults.push({ quizId, percentage });
       }
 
+      setItemStorage('results', updatedResults);
       set({ results: updatedResults });
     },
   };
